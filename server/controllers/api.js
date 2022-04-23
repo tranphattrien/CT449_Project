@@ -1,6 +1,7 @@
 const Post = require("../models/posts");
 const fs = require("fs");
 const { json } = require("express");
+
 module.exports = class API {
   // fetch all posts
   static async fetchAllPost(req, res) {
@@ -41,7 +42,7 @@ module.exports = class API {
       new_image = req.file.filename;
       try {
         fs.unlinkSync("./uploads/" + req.body.old_image);
-      } catch (error) {
+      } catch (err) {
         console.log(err);
       }
     } else {
@@ -50,10 +51,10 @@ module.exports = class API {
     const newPost = req.body;
     newPost.image = new_image;
     try {
-      await Post.findByIdAndDelete(id, newPost);
-      res.status(200), json({ message: "Post udated successfully!!!" });
+      await Post.findByIdAndUpdate(id, newPost);
+      res.status(200).json({ message: "Post udated successfully!!!" });
     } catch (error) {
-      res.status(404), json({ message: err.message });
+      res.status(404).json({ message: err.message });
     }
   }
   // delete a post
