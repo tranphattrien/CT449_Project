@@ -70,9 +70,6 @@ export default {
 </script>
 
 <style scoped>
-.about-bg {
-  background: #221e20;
-}
 .about {
   width: 100%;
   min-height: 100vh;
@@ -81,7 +78,7 @@ export default {
 }
 
 .text-heading {
-  font-size: 68px;
+  font-size: 55px;
   font-weight: 600;
 }
 .profile {
@@ -89,7 +86,11 @@ export default {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background: #fff;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(221, 238, 249, 0.7),
+    rgba(188, 237, 249, 0.5)
+  );
   border-radius: 20px;
   margin-bottom: 10px;
 }
@@ -138,7 +139,6 @@ export default {
   justify-content: center;
 }
 .profile__social {
-  /* margin-right: 20px; */
   margin: 15px;
   padding: 12px 28px;
   border-radius: 8px;
