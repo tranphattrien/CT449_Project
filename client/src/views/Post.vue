@@ -61,3 +61,8 @@ export default {
   }
 };
 </script>
+<style>
+.br {
+  border-radius: 10px;
+}
+</style>

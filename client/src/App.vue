@@ -1,14 +1,14 @@
 <template>
   <v-app id="inspire">
-    <v-navigation-drawer v-model="drawer" app>
+    <v-navigation-drawer v-model="drawer" app class="nav">
       <v-list-item>
         <v-list-item-content>
           <v-list-item-title> CT449_PROJECT </v-list-item-title>
-          <!-- <v-list-item-subtitle> MEVN Full Stack App </v-list-item-subtitle> -->
+          <v-list-item-subtitle> MEVN Full Stack App </v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
       <v-divider></v-divider>
-      <v-list dense>
+      <v-list dense fixed>
         <v-list-item-group color="primary">
           <v-list-item v-for="(item, i) in items" :key="i" :to="item.link" link>
             <v-list-item-icon>
@@ -22,13 +22,13 @@
       </v-list>
     </v-navigation-drawer>
 
-    <v-app-bar app>
+    <v-app-bar fixed app class="header">
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
 
       <v-toolbar-title>Application</v-toolbar-title>
     </v-app-bar>
 
-    <v-main>
+    <v-main class="bg">
       <router-view></router-view>
     </v-main>
   </v-app>
@@ -46,3 +46,29 @@ export default {
   })
 };
 </script>
+<style>
+.header {
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(221, 238, 249, 0.7),
+    rgba(188, 237, 249, 0.5)
+  );
+  margin: 10px 10px !important;
+  border-radius: 10px !important;
+  z-index: 2;
+}
+.bg {
+  background: linear-gradient(45deg, #6f86d6, #88f0f8);
+}
+.nav {
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(221, 238, 249, 0.7),
+    rgba(188, 237, 249, 0.5)
+  );
+  margin: 10px 10px 10px 5px !important;
+  border-radius: 10px !important;
+  z-index: 2;
+  height: 97% !important;
+}
+</style>

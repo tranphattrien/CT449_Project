@@ -2,7 +2,7 @@
   <v-container>
     <v-row no-gutter>
       <v-col sm="10" class="mx-auto">
-        <v-card class="pa-5">
+        <v-card>
           <v-card-title>Edit This Post</v-card-title>
           <v-divider></v-divider>
           <v-form
