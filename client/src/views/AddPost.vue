@@ -2,8 +2,8 @@
   <v-container>
     <v-row no-gutter>
       <v-col sm="10" class="mx-auto">
-        <v-card class="pa-3">
-          <v-card-title>Add new Post</v-card-title>
+        <v-card class="pa-3 mt-4">
+          <v-card-title>Add New Post</v-card-title>
           <v-divider></v-divider>
           <v-form
             ref="form"

@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <nav-bar activeNav="true"></nav-bar>
-    <h1 class="text-center text-heading title-custom">About us</h1>
+    <h1 class="text-center text-heading title-custom mt-4">About us</h1>
     <div class="container">
       <div class="row">
         <div class="col-lg-6 col-md-6" v-for="user in users">
